@@ -1,0 +1,17 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Welcome";
+}
+
+<h2>Welcome</h2>
+
+<ul>
+    @for (int i =0; i < (int)ViewData["NumTimes"]!; i++)
+    {
+        //null-forgiving operator", который позволяет указать, что переменная ссылочного типа не равна null,
+        //что бы студия не выдавала предупреждений, о том что объект может быть NULL
+        <li>@ViewData["Message"]</li>
+    }
+</ul>
